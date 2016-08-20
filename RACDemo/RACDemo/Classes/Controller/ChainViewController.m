@@ -57,16 +57,30 @@
  */
 -(void)config{
     
-    UIView *v = [[UIView alloc]init];
+    UIView *view = [[UIView alloc]init];
     
-    [v cm_configMaker:^(ConfigMaker *make) {
+    [view cm_configMaker:^(ConfigMaker *make) {
     make.bgColor([UIColor redColor])
         .coreRadius(@50)
         .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 100, 100)]);
     }];
     
-    [self.view addSubview:v];
+    [self.view addSubview:view];
+    
+    
+    UILabel *lable = [[UILabel alloc]init];
+    lable.text = @"See the code in ChainViewController please";
+    lable.numberOfLines = 2;
+    lable.textAlignment = NSTextAlignmentCenter;
+    
+    [lable cm_configMaker:^(ConfigMaker *make) {
+    make.bgColor([UIColor colorWithRed:.3 green:.6 blue:.5 alpha:.8])
+        .frame([NSValue valueWithCGRect:CGRectMake(30, 250, 260, 66)])
+        .coreRadius(@(33));
+    }];
+    [self.view addSubview:lable];
 }
+
 @end
 
 
