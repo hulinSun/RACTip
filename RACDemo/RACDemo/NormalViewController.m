@@ -42,18 +42,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textField];
     [self.view addSubview:self.button];
     
-    //    [self target_actionDemo];
+        [self target_actionDemo];
     //    [self guesture];
     //    [self notification];
     //    [self delay];
     
     //    [self timer];
     //    [self replaceDelegate];
-    [self KVO];
+//    [self KVO];
 }
 
 /**
@@ -75,7 +75,6 @@
     [[self_weak_.textField rac_textSignal] subscribeNext:^(id x) {
         NSLog(@"x = %@",x); // 传过来的是字符串对象
     }];
-    
     
 }
 
