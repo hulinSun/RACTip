@@ -25,14 +25,6 @@
 }
 
 
-
-
-
-
-
-
-
-
 -(ConfigMaker * (^)(UIColor *color))bgColor{
     return ^(UIColor *color){
         self.view.backgroundColor = color;
