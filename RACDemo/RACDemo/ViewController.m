@@ -26,12 +26,12 @@ static NSString *const pushVCKey = @"pushVC";
 - (NSArray *)datas{
     if (!_datas) {
         self.datas =@[
-                      @{titleKey : @"NormalViewController 基础知识" ,
+                      @{titleKey : @"NormalViewController 响应机制替代" ,
                         pushVCKey : @"NormalViewController"
                         },
                       
-                      @{titleKey : @"NormalViewController 基础知识" ,
-                        pushVCKey : @"NormalViewController"
+                      @{titleKey : @"AdvancedViewController 信号的处理" ,
+                        pushVCKey : @"AdvancedViewController"
                         },
                       
                       @{titleKey : @"NormalViewController 基础知识" ,
