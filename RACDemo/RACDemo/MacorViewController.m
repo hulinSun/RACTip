@@ -13,7 +13,6 @@
 
 @interface MacorViewController ()
 
-@property (nonatomic, strong)UITextField *textField;
 
 @property (nonatomic, strong)UIButton *button;
 
@@ -34,15 +33,6 @@
     return _label;
 }
 
-- (UITextField *)textField{
-    if (!_textField) {
-        self.textField =[[UITextField alloc]init];
-        _textField.frame = CGRectMake(100, 100, 200, 44);
-        _textField.backgroundColor = [UIColor cyanColor];
-    }
-    return _textField;
-}
-
 
 - (UIButton *)button{
     if (!_button) {
@@ -56,7 +46,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [self.view addSubview:self.textField];
     [self.view addSubview:self.button];
     [self.view addSubview:self.label];
     
