@@ -13,10 +13,10 @@
 
 @interface MacorViewController ()
 
-
 @property (nonatomic, strong)UIButton *button;
 
 @property (nonatomic, strong)UILabel *label;
+
 @end
 
 @implementation MacorViewController

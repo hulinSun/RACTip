@@ -26,6 +26,10 @@ static NSString *const pushVCKey = @"pushVC";
 - (NSArray *)datas{
     if (!_datas) {
         self.datas =@[
+                      @{titleKey : @"ChainViewController 链式编程" ,
+                        pushVCKey : @"ChainViewController"
+                        },
+
                       @{titleKey : @"NormalViewController 响应机制替代" ,
                         pushVCKey : @"NormalViewController"
                         },
