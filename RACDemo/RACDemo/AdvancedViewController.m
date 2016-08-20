@@ -64,7 +64,8 @@
 //    [self throttle];
     
 //    [self signalOfSignal];
-    [self flatmap];
+//    [self flatmap];
+    [self repeat];
 }
 
 
@@ -437,6 +438,23 @@
         }];
     }] subscribeNext:^(id x) {
         NSLog(@"x = %@ class = %@",x , [x class]);
+    }];
+}
+
+/**
+ *  无线循环--> 内存暴涨，会crash 。一般不直接使用
+ */
+-(void)repeat{
+    RACSignal *signal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@"Talk is cheap , show me the code "];
+        [subscriber sendCompleted];
+        return nil;
+    }];
+    
+    [[[signal repeat] take:10] subscribeNext:^(id x) {
+        NSLog(@"x = %@",x);
+    }completed:^{
+        NSLog(@"-----over------");
     }];
 }
 @end
