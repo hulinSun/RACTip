@@ -58,12 +58,13 @@
 -(void)config{
     
     UIView *v = [[UIView alloc]init];
+    
     [v cm_configMaker:^(ConfigMaker *make) {
-        
     make.bgColor([UIColor redColor])
-        .coreRadius(@20)
-        .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 200, 100)]);
+        .coreRadius(@50)
+        .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 100, 100)]);
     }];
+    
     [self.view addSubview:v];
 }
 @end
