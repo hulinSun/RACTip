@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		040B1DE11D680A5500178FB4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1DE01D680A5500178FB4 /* main.m */; };
-		040B1DE41D680A5500178FB4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1DE31D680A5500178FB4 /* AppDelegate.m */; };
-		040B1DE71D680A5500178FB4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1DE61D680A5500178FB4 /* ViewController.m */; };
 		040B1DEC1D680A5500178FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040B1DEB1D680A5500178FB4 /* Assets.xcassets */; };
 		040B1DEF1D680A5500178FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040B1DED1D680A5500178FB4 /* LaunchScreen.storyboard */; };
 		040B1DFA1D680A5500178FB4 /* RACDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1DF91D680A5500178FB4 /* RACDemoTests.m */; };
 		040B1E051D680A5500178FB4 /* RACDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1E041D680A5500178FB4 /* RACDemoUITests.m */; };
-		044621BD1D68224F00B6F1DD /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621BC1D68224F00B6F1DD /* NormalViewController.m */; };
-		044621C01D68367200B6F1DD /* AdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621BF1D68367200B6F1DD /* AdvancedViewController.m */; };
-		044621C31D68686200B6F1DD /* MutiSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621C21D68686200B6F1DD /* MutiSignalViewController.m */; };
-		044621C61D68742700B6F1DD /* MacorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621C51D68742700B6F1DD /* MacorViewController.m */; };
-		044621C91D687F6E00B6F1DD /* ChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621C81D687F6E00B6F1DD /* ChainViewController.m */; };
-		044621CD1D688DF500B6F1DD /* UIView+ConfigMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621CC1D688DF500B6F1DD /* UIView+ConfigMake.m */; };
-		044621D01D688E4500B6F1DD /* ConfigMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621CF1D688E4500B6F1DD /* ConfigMaker.m */; };
+		044621E81D68985800B6F1DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621D31D68985800B6F1DD /* AppDelegate.m */; };
+		044621E91D68985800B6F1DD /* AdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621D61D68985800B6F1DD /* AdvancedViewController.m */; };
+		044621EA1D68985800B6F1DD /* ChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621D81D68985800B6F1DD /* ChainViewController.m */; };
+		044621EB1D68985800B6F1DD /* MacorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621DA1D68985800B6F1DD /* MacorViewController.m */; };
+		044621EC1D68985800B6F1DD /* MutiSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621DC1D68985800B6F1DD /* MutiSignalViewController.m */; };
+		044621ED1D68985800B6F1DD /* NormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621DE1D68985800B6F1DD /* NormalViewController.m */; };
+		044621EE1D68985800B6F1DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621E01D68985800B6F1DD /* ViewController.m */; };
+		044621EF1D68985800B6F1DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621E11D68985800B6F1DD /* main.m */; };
+		044621F01D68985800B6F1DD /* ConfigMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621E41D68985800B6F1DD /* ConfigMaker.m */; };
+		044621F11D68985800B6F1DD /* UIView+ConfigMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621E71D68985800B6F1DD /* UIView+ConfigMake.m */; };
 		42F9758AC341849A4B9538BD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A542FDE9317C99BF16C28F2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,11 +43,6 @@
 
 /* Begin PBXFileReference section */
 		040B1DDC1D680A5500178FB4 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		040B1DE01D680A5500178FB4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		040B1DE21D680A5500178FB4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		040B1DE31D680A5500178FB4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		040B1DE51D680A5500178FB4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		040B1DE61D680A5500178FB4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		040B1DEB1D680A5500178FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040B1DEE1D680A5500178FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		040B1DF01D680A5500178FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,20 +52,25 @@
 		040B1E001D680A5500178FB4 /* RACDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040B1E041D680A5500178FB4 /* RACDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACDemoUITests.m; sourceTree = "<group>"; };
 		040B1E061D680A5500178FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		044621BB1D68224F00B6F1DD /* NormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
-		044621BC1D68224F00B6F1DD /* NormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
-		044621BE1D68367200B6F1DD /* AdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedViewController.h; sourceTree = "<group>"; };
-		044621BF1D68367200B6F1DD /* AdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedViewController.m; sourceTree = "<group>"; };
-		044621C11D68686200B6F1DD /* MutiSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutiSignalViewController.h; sourceTree = "<group>"; };
-		044621C21D68686200B6F1DD /* MutiSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutiSignalViewController.m; sourceTree = "<group>"; };
-		044621C41D68742700B6F1DD /* MacorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacorViewController.h; sourceTree = "<group>"; };
-		044621C51D68742700B6F1DD /* MacorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacorViewController.m; sourceTree = "<group>"; };
-		044621C71D687F6E00B6F1DD /* ChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainViewController.h; sourceTree = "<group>"; };
-		044621C81D687F6E00B6F1DD /* ChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainViewController.m; sourceTree = "<group>"; };
-		044621CB1D688DF500B6F1DD /* UIView+ConfigMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConfigMake.h"; sourceTree = "<group>"; };
-		044621CC1D688DF500B6F1DD /* UIView+ConfigMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConfigMake.m"; sourceTree = "<group>"; };
-		044621CE1D688E4500B6F1DD /* ConfigMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigMaker.h; sourceTree = "<group>"; };
-		044621CF1D688E4500B6F1DD /* ConfigMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigMaker.m; sourceTree = "<group>"; };
+		044621D21D68985800B6F1DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		044621D31D68985800B6F1DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		044621D51D68985800B6F1DD /* AdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedViewController.h; sourceTree = "<group>"; };
+		044621D61D68985800B6F1DD /* AdvancedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdvancedViewController.m; sourceTree = "<group>"; };
+		044621D71D68985800B6F1DD /* ChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainViewController.h; sourceTree = "<group>"; };
+		044621D81D68985800B6F1DD /* ChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainViewController.m; sourceTree = "<group>"; };
+		044621D91D68985800B6F1DD /* MacorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacorViewController.h; sourceTree = "<group>"; };
+		044621DA1D68985800B6F1DD /* MacorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacorViewController.m; sourceTree = "<group>"; };
+		044621DB1D68985800B6F1DD /* MutiSignalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MutiSignalViewController.h; sourceTree = "<group>"; };
+		044621DC1D68985800B6F1DD /* MutiSignalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MutiSignalViewController.m; sourceTree = "<group>"; };
+		044621DD1D68985800B6F1DD /* NormalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalViewController.h; sourceTree = "<group>"; };
+		044621DE1D68985800B6F1DD /* NormalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalViewController.m; sourceTree = "<group>"; };
+		044621DF1D68985800B6F1DD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		044621E01D68985800B6F1DD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		044621E11D68985800B6F1DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		044621E31D68985800B6F1DD /* ConfigMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigMaker.h; sourceTree = "<group>"; };
+		044621E41D68985800B6F1DD /* ConfigMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigMaker.m; sourceTree = "<group>"; };
+		044621E61D68985800B6F1DD /* UIView+ConfigMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConfigMake.h"; sourceTree = "<group>"; };
+		044621E71D68985800B6F1DD /* UIView+ConfigMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConfigMake.m"; sourceTree = "<group>"; };
 		20CB9B59C1CF6DADB0DA7E41 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		456B00795F00729810733A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7A542FDE9317C99BF16C28F2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,24 +127,7 @@
 		040B1DDE1D680A5500178FB4 /* RACDemo */ = {
 			isa = PBXGroup;
 			children = (
-				040B1DE21D680A5500178FB4 /* AppDelegate.h */,
-				040B1DE31D680A5500178FB4 /* AppDelegate.m */,
-				040B1DE51D680A5500178FB4 /* ViewController.h */,
-				040B1DE61D680A5500178FB4 /* ViewController.m */,
-				044621C71D687F6E00B6F1DD /* ChainViewController.h */,
-				044621C81D687F6E00B6F1DD /* ChainViewController.m */,
-				044621CE1D688E4500B6F1DD /* ConfigMaker.h */,
-				044621CF1D688E4500B6F1DD /* ConfigMaker.m */,
-				044621CB1D688DF500B6F1DD /* UIView+ConfigMake.h */,
-				044621CC1D688DF500B6F1DD /* UIView+ConfigMake.m */,
-				044621BB1D68224F00B6F1DD /* NormalViewController.h */,
-				044621BC1D68224F00B6F1DD /* NormalViewController.m */,
-				044621BE1D68367200B6F1DD /* AdvancedViewController.h */,
-				044621BF1D68367200B6F1DD /* AdvancedViewController.m */,
-				044621C11D68686200B6F1DD /* MutiSignalViewController.h */,
-				044621C21D68686200B6F1DD /* MutiSignalViewController.m */,
-				044621C41D68742700B6F1DD /* MacorViewController.h */,
-				044621C51D68742700B6F1DD /* MacorViewController.m */,
+				044621D11D68985800B6F1DD /* Classes */,
 				040B1DEB1D680A5500178FB4 /* Assets.xcassets */,
 				040B1DED1D680A5500178FB4 /* LaunchScreen.storyboard */,
 				040B1DF01D680A5500178FB4 /* Info.plist */,
@@ -156,7 +139,6 @@
 		040B1DDF1D680A5500178FB4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				040B1DE01D680A5500178FB4 /* main.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -177,6 +159,56 @@
 				040B1E061D680A5500178FB4 /* Info.plist */,
 			);
 			path = RACDemoUITests;
+			sourceTree = "<group>";
+		};
+		044621D11D68985800B6F1DD /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				044621D21D68985800B6F1DD /* AppDelegate.h */,
+				044621D31D68985800B6F1DD /* AppDelegate.m */,
+				044621D41D68985800B6F1DD /* Controller */,
+				044621E11D68985800B6F1DD /* main.m */,
+				044621E21D68985800B6F1DD /* Model */,
+				044621E51D68985800B6F1DD /* View */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		044621D41D68985800B6F1DD /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				044621D51D68985800B6F1DD /* AdvancedViewController.h */,
+				044621D61D68985800B6F1DD /* AdvancedViewController.m */,
+				044621D71D68985800B6F1DD /* ChainViewController.h */,
+				044621D81D68985800B6F1DD /* ChainViewController.m */,
+				044621D91D68985800B6F1DD /* MacorViewController.h */,
+				044621DA1D68985800B6F1DD /* MacorViewController.m */,
+				044621DB1D68985800B6F1DD /* MutiSignalViewController.h */,
+				044621DC1D68985800B6F1DD /* MutiSignalViewController.m */,
+				044621DD1D68985800B6F1DD /* NormalViewController.h */,
+				044621DE1D68985800B6F1DD /* NormalViewController.m */,
+				044621DF1D68985800B6F1DD /* ViewController.h */,
+				044621E01D68985800B6F1DD /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		044621E21D68985800B6F1DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				044621E31D68985800B6F1DD /* ConfigMaker.h */,
+				044621E41D68985800B6F1DD /* ConfigMaker.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		044621E51D68985800B6F1DD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				044621E61D68985800B6F1DD /* UIView+ConfigMake.h */,
+				044621E71D68985800B6F1DD /* UIView+ConfigMake.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		34EAB37D6E6C5E054FF9496D /* Frameworks */ = {
@@ -376,16 +408,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				044621D01D688E4500B6F1DD /* ConfigMaker.m in Sources */,
-				044621C01D68367200B6F1DD /* AdvancedViewController.m in Sources */,
-				044621C61D68742700B6F1DD /* MacorViewController.m in Sources */,
-				044621C91D687F6E00B6F1DD /* ChainViewController.m in Sources */,
-				040B1DE71D680A5500178FB4 /* ViewController.m in Sources */,
-				044621BD1D68224F00B6F1DD /* NormalViewController.m in Sources */,
-				040B1DE41D680A5500178FB4 /* AppDelegate.m in Sources */,
-				040B1DE11D680A5500178FB4 /* main.m in Sources */,
-				044621C31D68686200B6F1DD /* MutiSignalViewController.m in Sources */,
-				044621CD1D688DF500B6F1DD /* UIView+ConfigMake.m in Sources */,
+				044621F11D68985800B6F1DD /* UIView+ConfigMake.m in Sources */,
+				044621EE1D68985800B6F1DD /* ViewController.m in Sources */,
+				044621EC1D68985800B6F1DD /* MutiSignalViewController.m in Sources */,
+				044621EA1D68985800B6F1DD /* ChainViewController.m in Sources */,
+				044621EB1D68985800B6F1DD /* MacorViewController.m in Sources */,
+				044621E91D68985800B6F1DD /* AdvancedViewController.m in Sources */,
+				044621F01D68985800B6F1DD /* ConfigMaker.m in Sources */,
+				044621E81D68985800B6F1DD /* AppDelegate.m in Sources */,
+				044621EF1D68985800B6F1DD /* main.m in Sources */,
+				044621ED1D68985800B6F1DD /* NormalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
