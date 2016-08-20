@@ -30,12 +30,16 @@ static NSString *const pushVCKey = @"pushVC";
                         pushVCKey : @"NormalViewController"
                         },
                       
-                      @{titleKey : @"AdvancedViewController 单信号的处理" ,
+                      @{titleKey : @"AdvancedViewController 单信号的处理",
                         pushVCKey : @"AdvancedViewController"
                         },
                       
-                      @{titleKey : @"NormalViewController 基础知识" ,
-                        pushVCKey : @"NormalViewController"
+                      @{titleKey : @"MutiSignalViewController 多信号的处理",
+                        pushVCKey : @"MutiSignalViewController"
+                        },
+                      
+                      @{titleKey : @"MacorViewController RAC宏",
+                        pushVCKey : @"MacorViewController"
                         }
                      
                       ];
@@ -98,6 +102,8 @@ static NSString *const pushVCKey = @"pushVC";
     NSDictionary *dict = self.datas[indexPath.row];
     Class pushClass = NSClassFromString(dict[pushVCKey]);
     UIViewController *vc = [[pushClass alloc]init];
+    NSString *title = [dict[titleKey] componentsSeparatedByString:@" "].lastObject;
+    vc.title = title;
     [self.navigationController pushViewController:vc animated:YES];
     
 }

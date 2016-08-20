@@ -13,7 +13,6 @@
 
 @property (nonatomic, strong)UITextField *textField;
 
-@property (nonatomic, strong)UIButton *button;
 
 
 @end
@@ -31,20 +30,11 @@
 }
 
 
-- (UIButton *)button{
-    if (!_button) {
-        self.button =[[UIButton alloc]init];
-        _button.frame = CGRectMake(200, 200, 100, 40);
-        _button.backgroundColor = [UIColor colorWithRed:0.4 green:.5 blue:.6 alpha:.8];
-    }
-    return _button;
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:self.textField];
-    [self.view addSubview:self.button];
+    
     
 //    [self signalDemo1];
     

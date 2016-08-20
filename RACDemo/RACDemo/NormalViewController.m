@@ -76,6 +76,10 @@
         NSLog(@"x = %@",x); // 传过来的是字符串对象
     }];
     
+    [[self_weak_.button rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        NSLog(@"点击了按钮");
+    }];
+    
 }
 
 
