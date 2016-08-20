@@ -176,7 +176,6 @@
     [RACObserve(sc, contentOffset) subscribeNext:^(id x) {
         NSLog(@"x = %@ , class = %@",x , [x class]); // 监听的是什么属性，传过来的就是什么属性。
     }];
-    
 }
 
 

@@ -19,6 +19,8 @@
 		044621C31D68686200B6F1DD /* MutiSignalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621C21D68686200B6F1DD /* MutiSignalViewController.m */; };
 		044621C61D68742700B6F1DD /* MacorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621C51D68742700B6F1DD /* MacorViewController.m */; };
 		044621C91D687F6E00B6F1DD /* ChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621C81D687F6E00B6F1DD /* ChainViewController.m */; };
+		044621CD1D688DF500B6F1DD /* UIView+ConfigMake.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621CC1D688DF500B6F1DD /* UIView+ConfigMake.m */; };
+		044621D01D688E4500B6F1DD /* ConfigMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621CF1D688E4500B6F1DD /* ConfigMaker.m */; };
 		42F9758AC341849A4B9538BD /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A542FDE9317C99BF16C28F2 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +67,10 @@
 		044621C51D68742700B6F1DD /* MacorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacorViewController.m; sourceTree = "<group>"; };
 		044621C71D687F6E00B6F1DD /* ChainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChainViewController.h; sourceTree = "<group>"; };
 		044621C81D687F6E00B6F1DD /* ChainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChainViewController.m; sourceTree = "<group>"; };
+		044621CB1D688DF500B6F1DD /* UIView+ConfigMake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ConfigMake.h"; sourceTree = "<group>"; };
+		044621CC1D688DF500B6F1DD /* UIView+ConfigMake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ConfigMake.m"; sourceTree = "<group>"; };
+		044621CE1D688E4500B6F1DD /* ConfigMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigMaker.h; sourceTree = "<group>"; };
+		044621CF1D688E4500B6F1DD /* ConfigMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigMaker.m; sourceTree = "<group>"; };
 		20CB9B59C1CF6DADB0DA7E41 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		456B00795F00729810733A8F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		7A542FDE9317C99BF16C28F2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +133,10 @@
 				040B1DE61D680A5500178FB4 /* ViewController.m */,
 				044621C71D687F6E00B6F1DD /* ChainViewController.h */,
 				044621C81D687F6E00B6F1DD /* ChainViewController.m */,
+				044621CE1D688E4500B6F1DD /* ConfigMaker.h */,
+				044621CF1D688E4500B6F1DD /* ConfigMaker.m */,
+				044621CB1D688DF500B6F1DD /* UIView+ConfigMake.h */,
+				044621CC1D688DF500B6F1DD /* UIView+ConfigMake.m */,
 				044621BB1D68224F00B6F1DD /* NormalViewController.h */,
 				044621BC1D68224F00B6F1DD /* NormalViewController.m */,
 				044621BE1D68367200B6F1DD /* AdvancedViewController.h */,
@@ -366,6 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				044621D01D688E4500B6F1DD /* ConfigMaker.m in Sources */,
 				044621C01D68367200B6F1DD /* AdvancedViewController.m in Sources */,
 				044621C61D68742700B6F1DD /* MacorViewController.m in Sources */,
 				044621C91D687F6E00B6F1DD /* ChainViewController.m in Sources */,
@@ -374,6 +385,7 @@
 				040B1DE41D680A5500178FB4 /* AppDelegate.m in Sources */,
 				040B1DE11D680A5500178FB4 /* main.m in Sources */,
 				044621C31D68686200B6F1DD /* MutiSignalViewController.m in Sources */,
+				044621CD1D688DF500B6F1DD /* UIView+ConfigMake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

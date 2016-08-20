@@ -7,7 +7,8 @@
 //
 
 #import "ChainViewController.h"
-
+#import "UIView+ConfigMake.h"
+#import "ConfigMaker.h"
 
 
 @interface ChainViewController ()
@@ -22,10 +23,13 @@
     
     /**
      *  block 的链式调用
+     *  特点 ： 函数的返回值是 block ，而 block 的返回值是 对象本身 。这样就可以了
      */
     [self easyChainDemo];
     
     [self parmChainDemo];
+    
+    [self config];
 }
 
 /**
@@ -45,6 +49,22 @@
     Hony *hony = [[Hony alloc]init];
     // 是不是越来有masonry 的意思了
     hony.call(@"老公").takeOff(@"bar...");
+}
+
+
+/**
+ *  就是这么吊
+ */
+-(void)config{
+    
+    UIView *v = [[UIView alloc]init];
+    [v cm_configMaker:^(ConfigMaker *make) {
+        
+    make.bgColor([UIColor redColor])
+        .coreRadius(@20)
+        .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 200, 100)]);
+    }];
+    [self.view addSubview:v];
 }
 @end
 
