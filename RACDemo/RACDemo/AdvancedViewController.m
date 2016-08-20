@@ -61,7 +61,10 @@
 //    [self takeWhileBlock];
 //    [self skipWhileBlock];
 //    [self skipUntilBlock];
-    [self throttle];
+//    [self throttle];
+    
+//    [self signalOfSignal];
+    [self flatmap];
 }
 
 
@@ -368,12 +371,72 @@
 }
 
 /**
- *  各种不同情况的优化
+ *  throttle节流 ： 各种不同情况的优化
+ *  distinctUntilChanged : 如果新的消息，和上一次的消息是一样的，只发送一次消息
+ *  ignore : 忽略某个消息,忽略某个极端的情况
+ *  switchToLatest :
  */
 -(void)throttle{
     
+    [[[[[self.textField rac_textSignal] throttle:0.4] distinctUntilChanged] ignore:@""] subscribeNext:^(id x) {
+        
+        NSLog(@"%@",x);
+    }];
+}
+
+/**
+ *  信号的信号
+ * switchToLatest : 处理信号的信号，就是处理最后的那个信号
+ */
+-(void)signalOfSignal
+{
+    
+    [[[[[[[self.textField rac_textSignal] throttle:0.4] distinctUntilChanged] ignore:@""]
+     map:^id(id value) {
+         
+         return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+             [subscriber sendNext:value];
+             [subscriber sendCompleted];
+             
+             return [RACDisposable disposableWithBlock:^{
+                  // 这里是取消订阅信号的代码.
+             }];
+         }];
+     }] switchToLatest] subscribeNext:^(id x) {
+         // ...
+        NSLog(@"%@",x);
+    }];
 }
 
 
 
+/**
+ *  扁平化映射 . 信号的信号( 类似于盒子的盒子)
+ */
+-(void)flatmap{
+    
+    /***
+    [[[self.textField rac_textSignal] map:^id(id value) {
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:value];
+            [subscriber sendCompleted];
+            return  nil;
+        }];
+    }] subscribeNext:^(id x) {
+        // 订阅之后，接受到的也是一个信号。怎么玩。
+        NSLog(@"x = %@ class = %@",x , [x class]);
+    }]; */
+    
+    
+    // 扁平化映射
+    [[[self.textField rac_textSignal] flattenMap:^id(id value) {
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:value];
+            [subscriber sendCompleted];
+            return  nil;
+        }];
+    }] subscribeNext:^(id x) {
+        NSLog(@"x = %@ class = %@",x , [x class]);
+    }];
+}
 @end

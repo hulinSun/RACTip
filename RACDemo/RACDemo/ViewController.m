@@ -30,7 +30,7 @@ static NSString *const pushVCKey = @"pushVC";
                         pushVCKey : @"NormalViewController"
                         },
                       
-                      @{titleKey : @"AdvancedViewController 信号的处理" ,
+                      @{titleKey : @"AdvancedViewController 单信号的处理" ,
                         pushVCKey : @"AdvancedViewController"
                         },
                       
