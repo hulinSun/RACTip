@@ -23,7 +23,7 @@
     /**
      *  block 的链式调用
      */
-//    [self easyChainDemo];
+    [self easyChainDemo];
     
     [self parmChainDemo];
 }
@@ -43,7 +43,7 @@
 -(void)parmChainDemo
 {
     Hony *hony = [[Hony alloc]init];
-    // 是不是越来有mansory 的意思了
+    // 是不是越来有masonry 的意思了
     hony.call(@"老公").takeOff(@"bar...");
 }
 @end
@@ -54,7 +54,7 @@
 -( Hony *(^)() )shopping
 {
     return ^{
-        NSLog(@"别特么烦老子敲代码，去逛街去");
+        NSLog(@"别特么烦老子敲代码，逛街去");
         return self;
     };
 }
@@ -62,7 +62,7 @@
 -(Hony *(^)())eating
 {
     return ^{
-        NSLog(@"累了就去吃点东西.");
+        NSLog(@"逛累了就去吃点东西.");
         return self;
     };
 }
@@ -83,5 +83,7 @@
         return self;
     };
 }
+
+
 
 @end
