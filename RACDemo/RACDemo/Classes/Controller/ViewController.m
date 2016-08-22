@@ -37,7 +37,7 @@ static NSString *const pushVCKey = @"pushVC";
                         pushVCKey : @"ChainViewController"
                         },
                       
-                      @{titleKey : @"RACBasics1Controller ReactiveCocoa基础概念" ,
+                      @{titleKey : @"RACBasics1Controller ReactiveCocoa常用类" ,
                         pushVCKey : @"RACBasics1Controller"
                         },
                       
