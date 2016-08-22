@@ -215,4 +215,30 @@
         NSLog(@"%@",x);
     }];
 }
+
+-(void)thenExa
+{
+    //用那个著名的脑筋急转弯说明吧，“如何把大象放进冰箱里”  第一步，打开冰箱；第二步，把大象放进冰箱；第三步，关上冰箱门。
+    
+    //与信号传递类似，不过使用 `then` 表明的是秩序，没有传递value
+    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        NSLog(@"RAC信号串------打开冰箱");
+        [subscriber sendCompleted];
+        return nil;
+    }] then:^RACSignal *{
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            NSLog(@"RAC信号串------把大象放进冰箱");
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }] then:^RACSignal *{
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            NSLog(@"RAC信号串------关上冰箱门");
+            [subscriber sendCompleted];
+            return nil;
+        }];
+    }] subscribeNext:^(id x) {
+        NSLog(@"RAC信号串------Over");
+    }];
+}
 @end
