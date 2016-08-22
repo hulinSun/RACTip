@@ -23,6 +23,13 @@ static NSString *const pushVCKey = @"pushVC";
 
 @implementation ViewController
 
+/**
+ * 高阶信号处理
+ * 冷信号与热信号专题
+ * RAC 并发编程
+ * 信号的生命周期
+ * 信号的订阅取消操作
+ */
 - (NSArray *)datas{
     if (!_datas) {
         self.datas =@[
