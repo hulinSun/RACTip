@@ -57,7 +57,8 @@
      *  Hook原理：在每次调用一个API返回结果之前，先执行你自己的方法，改变结果的输出。
      */
 //    [self bind];
-    [self faltmap];
+//    [self faltmap];
+    [self then];
     
 }
 
@@ -174,12 +175,44 @@
      * 5.订阅bindBlock的返回信号，就会拿到绑定信号的订阅者，把处理完成的信号内容发送出来。
      *
      */
-    [[self.textField.rac_textSignal flattenMap:^RACStream *(id value) {
+    [[[self.textField.rac_textSignal flattenMap:^RACStream *(id value) {
         return [RACReturnSignal return:[NSString stringWithFormat:@"输出：%@",value]];
-    }]subscribeNext:^(id x) {
+    }]ignore:@"输出：" ]subscribeNext:^(id x) {
         // x 已经被压平了。signal of signals
         
         NSLog(@"x = %@",x);
+    }];
+    
+    /**
+     * 1.FlatternMap中的Block返回信号。
+     * 2.Map中的Block返回对象。
+     * 3.开发中，如果信号发出的值不是信号，映射一般使用Map
+     * 4.开发中，如果信号发出的值是信号，映射一般使用FlatternMap。
+     * signal Of signals用FlatternMap。
+     */
+}
+
+
+/**
+ * then:用于连接两个信号，当第一个信号完成，才会连接then返回的信号
+ */
+-(void)then{
+    // 注意使用then，之前信号的值会被忽略掉.
+    // 底层实现：1、先过滤掉之前的信号发出的值。2.使用concat连接then返回的信号
+    [[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [subscriber sendNext:@1];
+        [subscriber sendCompleted];
+        return nil;
+    }] then:^RACSignal *{
+        return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+            [subscriber sendNext:@2];
+            return nil;
+        }];
+    }] subscribeNext:^(id x) {
+        
+        // 只能接收到第二个信号的值，也就是then返回信号的值
+        NSLog(@"%@",x);
     }];
 }
 @end

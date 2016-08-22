@@ -55,7 +55,8 @@
 
 -(void)buttonDemo{
     
-
+// RAC(self.loginViewModel.account, account) = _accountField.rac_textSignal;
+    
     RAC(self.button , backgroundColor) = [RACObserve(self.button, selected) map:^id(NSNumber *selected) {
         
         return selected.boolValue ?  [UIColor greenColor] : [UIColor redColor];

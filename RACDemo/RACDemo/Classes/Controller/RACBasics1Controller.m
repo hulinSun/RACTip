@@ -73,6 +73,25 @@
     
 }
 
+/**
+ *  操作方法秩序
+ */
+-(void)nextOrder{
+    
+    [[[[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@1];
+        [subscriber sendCompleted];
+        return nil;
+    }] doNext:^(id x) {
+        // 执行[subscriber sendNext:@1];之前会调用这个Block
+        NSLog(@"doNext");;
+    }] doCompleted:^{
+        // 执行[subscriber sendCompleted];之前会调用这个Block
+        NSLog(@"doCompleted");;
+    }] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+}
 
 -(void)signal{
     /**

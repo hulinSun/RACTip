@@ -81,6 +81,11 @@
          NSLog(@" I come from  %@   %@" ,x , [NSDate date].description);
     }];
     
+    // 底层实现：
+    // 1.合并信号被订阅的时候，就会遍历所有信号，并且发出这些信号。
+    // 2.每发出一个信号，这个信号就会被订阅
+    // 3.也就是合并信号一被订阅，就会订阅里面所有的信号。
+    // 4.只要有一个信号被发出就会被监听。
 }
 
 
@@ -210,7 +215,38 @@
 //        NSLog(@"x = %@  %@",x ,[NSDate date].description);
 //        NSLog(@"tuple.first = %@",x.first);
 //    }];
+}
+
+/**
+ *  reduce聚合:用于信号发出的内容是元组，把信号发出元组的值聚合成一个值
+ */
+-(void)reduce{
     
+    RACSignal *signalA = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@1];
+        return nil;
+    }];
+    
+    RACSignal *signalB = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        [subscriber sendNext:@2];
+        return nil;
+    }];
+    
+    // 聚合
+    // 常见的用法，（先组合在聚合）。combineLatest:(id<NSFastEnumeration>)signals reduce:(id (^)())reduceBlock
+    // reduce中的block简介:
+    // reduceblcok中的参数，有多少信号组合，reduceblcok就有多少参数，每个参数就是之前信号发出的内容
+    // reduceblcok的返回值：聚合信号之后的内容。
+    RACSignal *reduceSignal = [RACSignal combineLatest:@[signalA,signalB] reduce:^id(NSNumber *num1 ,NSNumber *num2){
+        return [NSString stringWithFormat:@"%@ %@",num1,num2];
+    }];
+    
+    [reduceSignal subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+    }];
+    
+    // 底层实现:
+    // 1.订阅聚合信号，每次有内容发出，就会执行reduceblcok，把信号内容转换成reduceblcok返回的值。
 }
 @end
 

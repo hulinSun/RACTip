@@ -204,9 +204,10 @@
 
 /**
  *  同时发出了多个消息，即多个sendNext ，只取给的几个.只发出前两个消息
+ *  从开始一共取N次的信号
  */
 -(void)take{
-    
+
     RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
         
         [subscriber sendNext:@"Talk is cheap , show me the code 1"];
@@ -246,7 +247,8 @@
 
 
 /**
- *  值去后面三个发出的消息
+ *  值去后面三个发出的消息 ,
+ *  取最后N次的信号,前提条件，订阅者必须调用完成，因为只有完成，就知道总共有多少信号
  */
 -(void)takeLast{
     RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
@@ -266,7 +268,7 @@
 }
 
 /**
- *  待处理
+ *  获取信号直到某个信号执行完成
  */
 -(void)takeUntil
 {
@@ -363,9 +365,9 @@
 
 /**
  *  throttle节流 ： 各种不同情况的优化
- *  distinctUntilChanged : 如果新的消息，和上一次的消息是一样的，只发送一次消息
+ *  distinctUntilChanged : 如果新的消息，和上一次的消息是一样的，只发送一次消息 , :当上一次的值和当前的值有明显的变化就会发出信号，否则会被忽略掉。
  *  ignore : 忽略某个消息,忽略某个极端的情况
- *  switchToLatest :
+ *  switchToLatest:用于signalOfSignals（信号的信号），有时候信号也会发出信号，会在signalOfSignals中，获取signalOfSignals发送的最新信号。
  */
 -(void)throttle{
     
@@ -446,7 +448,23 @@
     }completed:^{
         NSLog(@"-----over------");
     }];
+}
+
+/**
+ *  用于signalOfSignals（信号的信号），有时候信号也会发出信号，会在signalOfSignals中，获取signalOfSignals发送的最新信号。
+ */
+-(void)switchTolatst
+{
+    RACSubject *signalOfSignals = [RACSubject subject];
+    RACSubject *signal = [RACSubject subject];
     
-    
+    // 获取信号中信号最近发出信号，订阅最近发出的信号。
+    // 注意switchToLatest：只能用于信号中的信号
+    [signalOfSignals.switchToLatest subscribeNext:^(id x) {
+        
+        NSLog(@"%@",x);
+    }];
+    [signalOfSignals sendNext:signal];
+    [signal sendNext:@1];
 }
 @end
