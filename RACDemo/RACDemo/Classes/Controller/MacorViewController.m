@@ -55,6 +55,7 @@
 
 -(void)buttonDemo{
     
+
     RAC(self.button , backgroundColor) = [RACObserve(self.button, selected) map:^id(NSNumber *selected) {
         
         return selected.boolValue ?  [UIColor greenColor] : [UIColor redColor];
@@ -66,9 +67,17 @@
     }];
 }
 
+-(void)otherExam
+{
+    /**  假如对象的某个属性想绑定某个消息，可以使用RAC这个宏
+    RAC(self.submitButton, enabled) = [RACSignal combineLatest:@[self.usernameField.rac_textSignal, self.passwordField.rac_textSignal] reduce:^id(NSString *userName, NSString *password) {
+        return @(userName.length >= 6 && password.length >= 6);
+    }]; */
+}
+
 
 /**
- *  马婊 马金莲(马蓉)
+ *  婊 马金莲(马蓉)
  */
 -(void)labelDemo{
     RAC(self.label , text) = [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] map:^id(id value) {

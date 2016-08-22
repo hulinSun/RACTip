@@ -39,7 +39,7 @@
 //    [self concat];
 //    [self zipWith];
     
-    [self zip];
+//    [self zip];
 }
 
 /**
@@ -212,7 +212,6 @@
 //    }];
     
 }
-
 @end
 
 
