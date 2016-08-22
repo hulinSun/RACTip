@@ -58,7 +58,6 @@ static NSString *const pushVCKey = @"pushVC";
                       @{titleKey : @"MacorViewController RAC宏",
                         pushVCKey : @"MacorViewController"
                         }
-                     
                       ];
         
     }
