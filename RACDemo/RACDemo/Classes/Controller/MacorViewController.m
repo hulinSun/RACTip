@@ -101,7 +101,7 @@
 
 
 -(void)weakStrong{
-    @weakify(self);
+//    @weakify(self);
 //    self_weak_.button;
 }
 
