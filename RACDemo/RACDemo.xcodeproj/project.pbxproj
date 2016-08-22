@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04086FDF1D6AC4F6003A282A /* RACBasics1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04086FDE1D6AC4F6003A282A /* RACBasics1Controller.m */; };
+		04086FE21D6AE36F003A282A /* RACBasics2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 04086FE11D6AE36F003A282A /* RACBasics2Controller.m */; };
 		040B1DEC1D680A5500178FB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040B1DEB1D680A5500178FB4 /* Assets.xcassets */; };
 		040B1DEF1D680A5500178FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040B1DED1D680A5500178FB4 /* LaunchScreen.storyboard */; };
 		040B1DFA1D680A5500178FB4 /* RACDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1DF91D680A5500178FB4 /* RACDemoTests.m */; };
@@ -45,6 +46,8 @@
 /* Begin PBXFileReference section */
 		04086FDD1D6AC4F6003A282A /* RACBasics1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACBasics1Controller.h; sourceTree = "<group>"; };
 		04086FDE1D6AC4F6003A282A /* RACBasics1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBasics1Controller.m; sourceTree = "<group>"; };
+		04086FE01D6AE36F003A282A /* RACBasics2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACBasics2Controller.h; sourceTree = "<group>"; };
+		04086FE11D6AE36F003A282A /* RACBasics2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RACBasics2Controller.m; sourceTree = "<group>"; };
 		040B1DDC1D680A5500178FB4 /* RACDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RACDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		040B1DEB1D680A5500178FB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		040B1DEE1D680A5500178FB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -192,6 +195,8 @@
 				044621DE1D68985800B6F1DD /* NormalViewController.m */,
 				04086FDD1D6AC4F6003A282A /* RACBasics1Controller.h */,
 				04086FDE1D6AC4F6003A282A /* RACBasics1Controller.m */,
+				04086FE01D6AE36F003A282A /* RACBasics2Controller.h */,
+				04086FE11D6AE36F003A282A /* RACBasics2Controller.m */,
 				044621DF1D68985800B6F1DD /* ViewController.h */,
 				044621E01D68985800B6F1DD /* ViewController.m */,
 			);
@@ -423,6 +428,7 @@
 				044621E81D68985800B6F1DD /* AppDelegate.m in Sources */,
 				04086FDF1D6AC4F6003A282A /* RACBasics1Controller.m in Sources */,
 				044621EF1D68985800B6F1DD /* main.m in Sources */,
+				04086FE21D6AE36F003A282A /* RACBasics2Controller.m in Sources */,
 				044621ED1D68985800B6F1DD /* NormalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -102,7 +102,6 @@
 -(void)weakStrong{
     @weakify(self);
 //    self_weak_.button;
-    
 }
 
 -(void)dealloc
