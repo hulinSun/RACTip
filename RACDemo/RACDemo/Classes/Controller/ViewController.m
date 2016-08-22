@@ -36,7 +36,11 @@ static NSString *const pushVCKey = @"pushVC";
                       @{titleKey : @"ChainViewController 链式编程" ,
                         pushVCKey : @"ChainViewController"
                         },
-
+                      
+                      @{titleKey : @"RACBasics1Controller ReactiveCocoa基础概念" ,
+                        pushVCKey : @"RACBasics1Controller"
+                        },
+                      
                       @{titleKey : @"NormalViewController 响应机制替代" ,
                         pushVCKey : @"NormalViewController"
                         },
@@ -100,6 +104,7 @@ static NSString *const pushVCKey = @"pushVC";
     
     NSDictionary *dict = self.datas[indexPath.row];
     cell.textLabel.text = dict[titleKey];
+    cell.textLabel.font = [UIFont systemFontOfSize:15];
     return cell;
 }
 
@@ -112,7 +117,10 @@ static NSString *const pushVCKey = @"pushVC";
     
     NSDictionary *dict = self.datas[indexPath.row];
     Class pushClass = NSClassFromString(dict[pushVCKey]);
+    if(!pushClass) return;
+    
     UIViewController *vc = [[pushClass alloc]init];
+    
     NSString *title = [dict[titleKey] componentsSeparatedByString:@" "].lastObject;
     vc.title = title;
     [self.navigationController pushViewController:vc animated:YES];
