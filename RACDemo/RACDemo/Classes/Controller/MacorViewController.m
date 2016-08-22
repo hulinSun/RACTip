@@ -86,6 +86,25 @@
     }];
 }
 
+
+-(void)tupack{
+    // 把参数中的数据包装成元组
+    RACTuple *tuple = RACTuplePack(@"shl",@22);
+    
+    // 解包元组，会把元组的值，按顺序给参数里面的变量赋值
+    RACTupleUnpack(NSString *name,NSNumber *age) = tuple;
+    NSLog(@"name = %@, age = %@",name ,age);
+//    tuple.first
+//    tuple[0]
+}
+
+
+-(void)weakStrong{
+    @weakify(self);
+//    self_weak_.button;
+    
+}
+
 -(void)dealloc
 {
     NSLog(@"dealoc");

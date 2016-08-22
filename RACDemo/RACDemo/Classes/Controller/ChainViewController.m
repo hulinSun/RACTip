@@ -68,6 +68,9 @@
     [self.view addSubview:view];
     
     
+    /**
+     泛型 + 多态 --> 能不能扩展通用性？
+     */
     UILabel *lable = [[UILabel alloc]init];
     lable.text = @"See the code in ChainViewController please";
     lable.numberOfLines = 2;
