@@ -60,7 +60,7 @@
     UIView *view = [[UIView alloc]init];
     
     [view cm_configMaker:^(ConfigMaker *make) {
-    make.bgColor([UIColor redColor])
+     make.bgColor([UIColor redColor])
         .coreRadius(@50)
         .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 100, 100)]);
     }];

@@ -20,8 +20,8 @@
 
 @implementation NormalViewController
 
-
 - (UITextField *)textField{
+    
     if (!_textField) {
         self.textField =[[UITextField alloc]init];
         _textField.frame = CGRectMake(100, 100, 200, 44);
