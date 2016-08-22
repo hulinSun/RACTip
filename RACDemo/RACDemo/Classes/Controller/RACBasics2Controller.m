@@ -58,8 +58,9 @@
      */
 //    [self bind];
 //    [self faltmap];
-    [self then];
+//    [self then];
     
+    [self thenExa];
 }
 
 /**
