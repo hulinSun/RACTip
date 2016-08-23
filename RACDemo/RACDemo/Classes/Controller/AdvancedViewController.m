@@ -9,6 +9,7 @@
 #import "AdvancedViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+//  参考链接 http://www.jianshu.com/p/a4fefb434652?utm_campaign=hugo&utm_medium=reader_share&utm_content=note
 @interface AdvancedViewController ()
 
 @property (nonatomic, strong)UITextField *textField;

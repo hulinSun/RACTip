@@ -10,6 +10,7 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+
 static NSString *const titleKey = @"title";
 static NSString *const pushVCKey = @"pushVC";
 
@@ -18,6 +19,8 @@ static NSString *const pushVCKey = @"pushVC";
 @property (nonatomic, strong)UITableView *tableView;
 
 @property (nonatomic, strong)NSArray *datas;
+
+
 @end
 
 
@@ -93,6 +96,7 @@ static NSString *const pushVCKey = @"pushVC";
 //        [self presentViewController:vc animated:YES completion:nil];
 //    }];
 }
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
