@@ -11,6 +11,7 @@
 #import "ConfigMaker.h"
 
 //参考链接 ： http://blog.sunnyxx.com/2014/03/06/rac_3_racsignal/
+// 参考链接:http://limboy.me/tech/2013/06/19/frp-reactivecocoa.html
 
 @interface ChainViewController ()
 
@@ -62,12 +63,11 @@
     
     [view cm_configMaker:^(ConfigMaker *make) {
      make.bgColor([UIColor redColor])
-        .coreRadius(@50)
-        .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 100, 100)]);
+         .coreRadius(@50)
+         .frame([NSValue valueWithCGRect:CGRectMake(100, 100, 100, 100)]);
     }];
     
     [self.view addSubview:view];
-    
     
     /**
      泛型 + 多态 --> 能不能扩展通用性？
@@ -85,7 +85,7 @@
     [self.view addSubview:lable];
 }
 
-// 参考链接:http://limboy.me/tech/2013/06/19/frp-reactivecocoa.html
+
 /**
  *  响应式编程思想：
  *  不需要考虑调用顺序，只需要知道考虑结果，类似于蝴蝶效应，产生一个事件，会影响很多东西，这些事件像流一样的传播出去，然后影响结果，借用面向对象的一句话，万物皆是流 (KVO 的实现思想)
@@ -100,7 +100,7 @@
  *  ReactiveCocoa被描述为函数响应式编程（FRP）框架(核心是信号)
  
  *  可以把信号想象成水龙头，只不过里面不是水，而是玻璃球(value)，直径跟水管的内径一样，这样就能保证玻璃球是依次排列，不会出现并排的情况(数据都是线性处理的，不会出现并发情况)。水龙头的开关默认是关的，除非有了接收方(subscriber)，才会打开。这样只要有新的玻璃球进来，就会自动传送给接收方。可以在水龙头上加一个过滤嘴(filter)，不符合的不让通过，也可以加一个改动装置，把球改变成符合自己的需求(map)。也可以把多个水龙头合并成一个新的水龙头(combineLatest:reduce:)，这样只要其中的一个水龙头有玻璃球出来，这个新合并的水龙头就会得到这个球
- *   想解函数一样编程 f1(x) = 2x + 1 ==> 求f1(2);
+ *   像解函数一样编程 f1(x) = 2x + 1 ==> 求f1(2);
                     f2(x) = x -4; ==> f2(3);
                     f3(x) = 3x + 5 ==> f3(2)
  

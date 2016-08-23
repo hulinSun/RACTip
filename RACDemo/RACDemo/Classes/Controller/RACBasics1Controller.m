@@ -69,7 +69,8 @@
     [self replaceDelegate];
     
 //    [self sequence];
-    [self command];
+//    [self command];
+    [self liftSel];
     
 }
 
@@ -121,6 +122,7 @@
         NSLog(@"completed");
     }];
     
+    
     /** 一个signal的生命由很多下一个(next)事件和一个错误(error)或完成(completed)事件组成（后两者不同时出现）
      
      *   Sequence是一种集合，很像 NSArray。但和数组不同的是，一个sequence里的值默认是延迟加载的（只有需要的时候才加载），这样的话如果sequence只有一部分被用到，那么这种机制就会提高性能。像Cocoa的集合类型一样，sequence不接受 nil 值。
@@ -129,6 +131,7 @@
     
     /**
      *  RACSubscriber : 订阅者的意思，用于发送信号，这是一个协议，不是一个类，只要遵守这个协议，并且实现方法才能成为订阅者。通过create创建的信号，都有一个订阅者，帮助他发送数据
+     *  RACSubscriber 也是也是一个类，实现了RACSubscriber 的协议
      *  RACDisposable:用于取消订阅或者清理资源，当信号发送完成或者发送错误的时候，就会自动触发它。
      */
     
@@ -220,7 +223,6 @@
     [numbers.rac_sequence.signal subscribeNext:^(id x) {
         NSLog(@"%@",x);
     }];
-
     
     // 字典
     NSDictionary *dict = @{@"name":@"shl",@"age":@22};
@@ -284,7 +286,7 @@
             [subscriber sendCompleted];
             
             return nil;
-        }];
+        }] ;
         
     }];
     
@@ -398,22 +400,30 @@
     
     // 处理多个请求，都返回结果的时候，统一做处理.
     RACSignal *request1 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        // 发送请求1
-        [subscriber sendNext:@"发送请求1"];
+        [[RACScheduler currentScheduler] afterDelay:2 schedule:^{
+            NSLog(@"1  %@",[NSDate date].description);
+            // 发送请求1
+            [subscriber sendNext:@"发送请求1"];
+        }];
         return nil;
     }];
     
     RACSignal *request2 = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        // 发送请求2
-        [subscriber sendNext:@"发送请求2"];
+        [[RACScheduler currentScheduler] afterDelay:3 schedule:^{
+            NSLog(@"2  %@",[NSDate date].description);
+            // 发送请求2
+            [subscriber sendNext:@"发送请求2"];
+        }];
         return nil;
     }];
     
+    NSLog(@"begin  %@",[NSDate date].description);
     // 使用注意：几个信号，参数一的方法就几个参数，每个参数对应信号发出的数据。
     [self rac_liftSelector:@selector(updateUIWithR1:r2:) withSignalsFromArray:@[request1,request2]];
 }
 
-// 更新UI
+// 更新UI --> 这个方法是上面两个方法都执行完毕之后才会来的
 - (void)updateUIWithR1:(id)data r2:(id)data1
-{   NSLog(@"更新UI%@  %@",data,data1); }
+{   NSLog(@"更新UI%@  %@  %@",data,data1 , [NSDate date].description); }
+
 @end

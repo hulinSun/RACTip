@@ -84,10 +84,10 @@
 -(void)labelDemo{
     
 
-    RAC(self.label , text ) = [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] map:^id(id value) {
+    RAC(self.label , text ) = [[[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] map:^id(id value) {
         // id 不能使用点语法
         return [value description];
-    }];
+    }] startWith:[NSDate date].description];
     
 //将label的输出和model的name属性绑定，实现联动，name但凡有变化都会使得label输出
 //RAC(self.outputLabel, text) = RACObserve(self.model, name);

@@ -36,7 +36,7 @@
     [self.view addSubview:self.textField];
     
 //    [self merge];
-//    [self concat];
+    [self concat];
 //    [self zipWith];
     
 //    [self zip];

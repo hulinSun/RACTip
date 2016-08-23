@@ -50,13 +50,13 @@
 //    [self takeLast];
 //    [self takeUntil];
 //    [self takeWhileBlock];
-//    [self skipWhileBlock];
+    [self skipWhileBlock];
 //    [self skipUntilBlock];
 //    [self throttle];
     
 //    [self signalOfSignal];
 //    [self flatmap];
-    [self repeat];
+//    [self repeat];
 }
 
 
@@ -74,7 +74,7 @@
         // 发送一个信号
         [subscriber sendNext:@"发送啦"];
         
-        [subscriber sendError:[NSError errorWithDomain:@"domain" code:200 userInfo:@{@"key" : @"value"}]];
+//        [subscriber sendError:[NSError errorWithDomain:@"domain" code:200 userInfo:@{@"key" : @"value"}]];
         
         [subscriber sendCompleted]; // 发送完之后一定要调用 sendCompleted 告诉信号发送完毕
         
@@ -88,17 +88,17 @@
     RACDisposable *dispose = [signal subscribeNext:^(id x) {
         NSLog(@"接受这个信号啦 x = %@",x);
     }error:^(NSError *error) {
+        // 如果接收到了错误，就不在执行下去了，从某种意义上这个信号结束了。但是不会走complted 的block
         NSLog(@" 接收到了错误 error = %@",error.description);
     } completed:^{
-#pragma mark - 这里为什么不执行？
         NSLog(@"接受信号完毕");
     }];
     
-    //    [dispose dispose]; // 取消订阅信号
+//    [dispose dispose]; // 取消订阅信号
 }
 
 /**
- *  map
+ *  map : 返回的是未封装过的值，是盒子里的东西 是一个Funtor(函子)
  */
 -(void)map{
     // map ： 映射。你给我一个东西，我吧这个东西经过某个规则加工之后，返回基于你给我的东西的一个结果给你
@@ -327,12 +327,12 @@
         [subscriber sendNext:@"Talk is cheap , show me the code 2"];
         [subscriber sendNext:@"Talk is cheap , show me the code 3"];
 
-        
         [subscriber sendCompleted];
+        
         return nil;
     }] skipWhileBlock:^BOOL(id x) {
         NSLog(@"skipWhileBlock x = %@",x);
-        return YES;
+        return NO;
     }];
     
     [signal subscribeNext:^(id x) {
@@ -465,7 +465,9 @@
         
         NSLog(@"%@",x);
     }];
+    
     [signalOfSignals sendNext:signal];
+    
     [signal sendNext:@1];
 }
 

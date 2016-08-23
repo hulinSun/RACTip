@@ -21,6 +21,7 @@
 @implementation RACBasics2Controller
 
 // 原文链接：http://www.jianshu.com/p/e10e5ca413b7
+
 - (UITextField *)textField{
     if (!_textField) {
         self.textField =[[UITextField alloc]init];

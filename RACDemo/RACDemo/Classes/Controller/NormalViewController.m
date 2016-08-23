@@ -16,13 +16,11 @@
 
 @property (nonatomic, strong)UIButton *button;
 
-@property (nonatomic, copy) NSString *name;
 @end
 
 @implementation NormalViewController
 
 - (UITextField *)textField{
-    
     if (!_textField) {
         self.textField =[[UITextField alloc]init];
         _textField.frame = CGRectMake(100, 100, 200, 44);
