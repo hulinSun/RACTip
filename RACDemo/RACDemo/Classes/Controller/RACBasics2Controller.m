@@ -241,6 +241,7 @@
     }] subscribeNext:^(id x) {
         NSLog(@"RAC信号串------Over");
     }];
+
 }
 
 /**
