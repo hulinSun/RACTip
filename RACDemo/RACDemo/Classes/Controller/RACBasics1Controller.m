@@ -69,8 +69,8 @@
     [self replaceDelegate];
     
 //    [self sequence];
-//    [self command];
-    [self liftSel];
+    [self command];
+//    [self liftSel];
     
 }
 
@@ -328,6 +328,14 @@
     }];
     // 5.执行命令
     [self.conmmand execute:@1];
+    
+
+    // 按钮的点击事件.
+    self.button.rac_command = [[RACCommand alloc] initWithSignalBlock:^(id _) {
+        NSLog(@"button was pressed!");
+        return [RACSignal empty];
+    }];
+    
 }
 
 
