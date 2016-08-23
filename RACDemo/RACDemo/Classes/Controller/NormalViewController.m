@@ -16,6 +16,7 @@
 
 @property (nonatomic, strong)UIButton *button;
 
+@property (nonatomic, copy) NSString *name;
 @end
 
 @implementation NormalViewController
@@ -179,6 +180,7 @@
     
 //    [sc rac_valuesAndChangesForKeyPath:@"contentOffset" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionNew observer:self];
 }
+
 
 
 -(void)dealloc{

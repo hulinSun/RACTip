@@ -247,6 +247,15 @@
     
     // 底层实现:
     // 1.订阅聚合信号，每次有内容发出，就会执行reduceblcok，把信号内容转换成reduceblcok返回的值。
+
+    /**
+     *  经典例子
+     
+     RAC(self.submitButton, enabled) = [RACSignal combineLatest:@[self.usernameField.rac_textSignal, self.passwordField.rac_textSignal] reduce:^id(NSString *userName, NSString *password) {
+     return @(userName.length >= 6 && password.length >= 6);
+     }];
+     */
+
 }
 @end
 
