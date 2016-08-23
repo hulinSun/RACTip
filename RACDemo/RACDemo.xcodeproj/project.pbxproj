@@ -13,6 +13,7 @@
 		040B1DEF1D680A5500178FB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 040B1DED1D680A5500178FB4 /* LaunchScreen.storyboard */; };
 		040B1DFA1D680A5500178FB4 /* RACDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1DF91D680A5500178FB4 /* RACDemoTests.m */; };
 		040B1E051D680A5500178FB4 /* RACDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 040B1E041D680A5500178FB4 /* RACDemoUITests.m */; };
+		0417F2D71D6C8B600041A273 /* ColdHotController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417F2D61D6C8B600041A273 /* ColdHotController.m */; };
 		044621E81D68985800B6F1DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621D31D68985800B6F1DD /* AppDelegate.m */; };
 		044621E91D68985800B6F1DD /* AdvancedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621D61D68985800B6F1DD /* AdvancedViewController.m */; };
 		044621EA1D68985800B6F1DD /* ChainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044621D81D68985800B6F1DD /* ChainViewController.m */; };
@@ -58,6 +59,8 @@
 		040B1E001D680A5500178FB4 /* RACDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RACDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		040B1E041D680A5500178FB4 /* RACDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RACDemoUITests.m; sourceTree = "<group>"; };
 		040B1E061D680A5500178FB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0417F2D51D6C8B600041A273 /* ColdHotController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColdHotController.h; sourceTree = "<group>"; };
+		0417F2D61D6C8B600041A273 /* ColdHotController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColdHotController.m; sourceTree = "<group>"; };
 		044621D21D68985800B6F1DD /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		044621D31D68985800B6F1DD /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		044621D51D68985800B6F1DD /* AdvancedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdvancedViewController.h; sourceTree = "<group>"; };
@@ -197,6 +200,8 @@
 				04086FDE1D6AC4F6003A282A /* RACBasics1Controller.m */,
 				04086FE01D6AE36F003A282A /* RACBasics2Controller.h */,
 				04086FE11D6AE36F003A282A /* RACBasics2Controller.m */,
+				0417F2D51D6C8B600041A273 /* ColdHotController.h */,
+				0417F2D61D6C8B600041A273 /* ColdHotController.m */,
 				044621DF1D68985800B6F1DD /* ViewController.h */,
 				044621E01D68985800B6F1DD /* ViewController.m */,
 			);
@@ -420,6 +425,7 @@
 			files = (
 				044621F11D68985800B6F1DD /* UIView+ConfigMake.m in Sources */,
 				044621EE1D68985800B6F1DD /* ViewController.m in Sources */,
+				0417F2D71D6C8B600041A273 /* ColdHotController.m in Sources */,
 				044621EC1D68985800B6F1DD /* MutiSignalViewController.m in Sources */,
 				044621EA1D68985800B6F1DD /* ChainViewController.m in Sources */,
 				044621EB1D68985800B6F1DD /* MacorViewController.m in Sources */,
