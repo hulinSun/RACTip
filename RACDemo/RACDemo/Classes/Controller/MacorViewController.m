@@ -10,6 +10,7 @@
 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 
+// 参考链接 http://blog.sunnyxx.com/2014/03/06/rac_1_macros/
 
 @interface MacorViewController ()
 
@@ -81,10 +82,24 @@
  *  婊 马金莲(马蓉)
  */
 -(void)labelDemo{
-    RAC(self.label , text) = [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] map:^id(id value) {
+    
+
+    RAC(self.label , text ) = [[RACSignal interval:1 onScheduler:[RACScheduler currentScheduler]] map:^id(id value) {
         // id 不能使用点语法
         return [value description];
     }];
+    
+//将label的输出和model的name属性绑定，实现联动，name但凡有变化都会使得label输出
+//RAC(self.outputLabel, text) = RACObserve(self.model, name);
+    
+    /**
+     *   RAC(TARGET, [KEYPATH, [NIL_VALUE]])
+     *   RAC(self.outputLabel, text, @"收到nil时就显示我") = self.inputTextField.rac_textSignal;
+     
+     *  RAC()总是出现在等号左边，等号右边是一个RACSignal，表示的意义是将一个对象的一个属性和一个signal绑定，signal每产生一个value（id类型），都会自动执行：
+     *  [TARGET setValue:value ?: NIL_VALUE forKeyPath:KEYPATH];
+     *
+     */
 }
 
 
@@ -103,6 +118,14 @@
 -(void)weakStrong{
 //    @weakify(self);
 //    self_weak_.button;
+    
+    /**
+    @weakify(self); // 定义了一个__weak的self_weak_变量
+    [RACObserve(self, name) subscribeNext:^(NSString *name) {
+        @strongify(self); // 局域定义了一个__strong的self指针指向self_weak
+        self.outputLabel.text = name;
+    }];
+     */
 }
 
 -(void)dealloc
