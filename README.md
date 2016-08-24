@@ -3,7 +3,8 @@ RAC学习笔记
 
 ###链式编程思想
 
-```
+```objc
+
 //1. 简单的链式调用
     Hony *hony = [[Hony alloc]init];
     hony.shopping().eating();
