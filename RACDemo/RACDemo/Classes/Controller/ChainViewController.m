@@ -32,6 +32,15 @@
     [self parmChainDemo];
     
     [self config];
+    NSLog(@"viewDidLoad");
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"[super viewWillAppear:animated];");
+//    NSInteger
+    
 }
 
 /**
